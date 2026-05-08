@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About MacroSim</title>
+<link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+
+<header>
+  <div class="logo">Macro<span>Sim</span></div>
+  <a class="github-link" href="https://github.com/rick-gi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+    <svg viewBox="0 0 16 16" fill="currentColor" width="24" height="24" aria-hidden="true">
+      <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+    </svg>
+  </a>
+</header>
+
+<section class="entities-overview">
+  <div class="container">
+    <div class="logic-header">
+      <span class="badge">Struttura del Sistema</span>
+      <h2>I Tre Pilastri della Simulazione</h2>
+      <p>MacroSim opera su un sistema chiuso dove ogni operazione influisce sui bilanci incrociati degli attori.</p>
+    </div>
+
+    <div class="entities-grid">
+      <div class="entity-box">
+        <div class="entity-header color-stato">Stato Centrale</div>
+        <ul class="entity-list">
+          <li><strong>Politica Fiscale:</strong> Gestione del deficit tramite il tasto "Eroga Bonus".</li>
+          <li><strong>Prelievo Fiscale:</strong> Riduzione della base monetaria circolante ("Preleva Tasse").</li>
+          <li><strong>Target Inflattivo:</strong> Regolazione automatica del potere d'acquisto reale.</li>
+        </ul>
+      </div>
+
+      <div class="entity-box">
+        <div class="entity-header color-banca">Banca Intesa</div>
+        <ul class="entity-list">
+          <li><strong>Emissione Creditizia:</strong> Creazione di depositi tramite mutui (Asset-side expansion).</li>
+          <li><strong>Vincolo di Riserva:</strong> Monitoraggio del rapporto tra riserve liquide e depositi totali.</li>
+          <li><strong>Gestione Interessi:</strong> Accumulo di capitale tramite la quota interessi dei rimborsi.</li>
+        </ul>
+      </div>
+
+      <div class="entity-box">
+        <div class="entity-header color-famiglia">Famiglia Rossi</div>
+        <ul class="entity-list">
+          <li><strong>Ciclo del Reddito:</strong> Stipendio fisso e spesa base automatizzata.</li>
+          <li><strong>Patrimonio Netto:</strong> Calcolo in tempo reale della solvibilità del nucleo.</li>
+          <li><strong>Propensione al Debito:</strong> Richiesta di mutui per l'espansione dei consumi.</li>
+        </ul>
+      </div>
+    </div>
+        <div class="cta-wrapper">
+      <a href="https://macro-sim-phi.vercel.app" class="btn-start">Avvia MacroSim v1.0</a>
+      <p class="cta-note">Nessuna installazione richiesta. Il motore gira interamente nel tuo browser.</p>
+        </div>
+
+    
+  </div>
+</section>
+
+
+
+
+
+<section class="audit-section">
+  <div class="container">
+    <div class="audit-card">
+      <div class="audit-content">
+        <h3>Audit Log & Partita Doppia</h3>
+        <p>Ogni "click" nella simulazione genera una scrittura contabile precisa. Il sistema non si limita a spostare numeri, ma registra il flusso di cassa (Cash Flow) e la variazione di stock (Balance Sheet) in un registro consultabile, garantendo che la somma dei bilanci sia sempre zero.</p>
+        <div class="mini-log-preview">
+          <code>[T+12] STATO -> FAMIGLIA: Bonus Erogato (+500€)</code><br/>
+          <code>[T+12] BANCA -> STATO: Incremento Debito Pubblico (+500€)</code>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="technical-deep-dive">
+  <div class="container">
+    
+    <div class="logic-header">
+      <span class="badge">Core Engine</span>
+      <h2>L'Architettura della Partita Doppia</h2>
+      <p>Il cuore pulsante di MacroSim: dove il codice incontra la teoria monetaria.</p>
+    </div>
+
+    <div class="tech-stack-grid">
+      <div class="tech-card">
+        <div class="code-tag">Function: eseguiMutuo()</div>
+        <h4>Emissione Creditizia</h4>
+        <p>Il simulatore espande il bilancio: crea un <strong>Asset (Credito)</strong> e una <strong>Passività (Deposito)</strong> simultaneamente. È la rappresentazione esatta della moneta endogena.</p>
+      </div>
+
+      <div class="tech-card">
+        <div class="code-tag">Function: prossimoMese()</div>
+        <h4>Ciclo di Ammortamento</h4>
+        <p>Gestisce la distruzione monetaria: la quota capitale rimborsata viene sottratta dai depositi, mentre gli interessi generano il profitto della banca.</p>
+      </div>
+    </div>
+
+    <div class="specs-and-stability">
+      <div class="specs-wrapper">
+        <h4>Specifiche del Modello v1.0</h4>
+        <table class="specs-table">
+          <thead>
+            <tr>
+              <th>Parametro</th>
+              <th>Valore Logico</th>
+              <th>Effetto nel Simulatore</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Aliquota Fiscale</td><td>20%</td><td>Drenaggio di liquidità e riduzione debito.</td></tr>
+            <tr><td>Coefficiente Riserva</td><td>2.0%</td><td>Soglia minima prima del crash sistemico.</td></tr>
+            <tr><td>Target Inflattivo</td><td>Dinamico</td><td>Erosione automatica del potere d'acquisto.</td></tr>
+            <tr><td>Creazione Moneta</td><td>Endogena</td><td>Espansione bilancio post-erogazione mutuo.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="stability-box">
+        <div class="stability-info">
+          <h4><span class="dot-red"></span> Algoritmo di Stabilità</h4>
+          <p>Il sistema monitora il rapporto <strong>Riserve/Depositi</strong>. Se scende sotto il <strong>2%</strong>, si attiva il trigger di fallimento.</p>
+        </div>
+        <div class="threshold-bar-container">
+          <div class="threshold-label">Soglia Critica di Insolvenza</div>
+          <div class="threshold-bar"><div class="fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="macro-dynamics-grid">
+      <div class="macro-card">
+        <div class="card-icon">📉</div>
+        <h4>Potere d'Acquisto</h4>
+        <p>L'inflazione agisce come erosore: se il potere d'acquisto scende, il costo della spesa base aumenta, drenando liquidità alle famiglie.</p>
+      </div>
+      <div class="macro-card">
+        <div class="card-icon">🏛️</div>
+        <h4>Politica Fiscale</h4>
+        <p>I Bonus non sono "regali": incrementano il Debito Pubblico e generano pressione inflattiva nel medio periodo.</p>
+      </div>
+      <div class="macro-card">
+        <div class="card-icon">⚖️</div>
+        <h4>Tax Drain</h4>
+        <p>Le tasse non finanziano solo lo Stato, ma agiscono come strumento restrittivo per "spegnere" l'eccesso di moneta nel sistema.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<footer>
+  <div class="footer-logo">Macro<span>Sim</span> v1.0</div>
+  <div class="footer-disc">
+    Sviluppato per fini di ricerca didattica. Modello semplificato basato su identità contabili nominali. 
+    I risultati delle simulazioni hanno valore esclusivamente pedagogico e non costituiscono analisi economica applicata.
+  </div>
+</footer>
+
+</body>
+</html>
