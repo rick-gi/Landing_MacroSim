@@ -13,7 +13,7 @@
   <div class="logo">Macro<span>Sim</span></div>
   <a class="github-link" href="https://github.com/rick-gi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
     <svg viewBox="0 0 16 16" fill="currentColor" width="24" height="24" aria-hidden="true">
-      <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+      <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1。9２。０８２。１２。５１。５６。８２１。２７。８２２。１５０３。０７－１。８７３。７５－３。６５３。９５。２８。２４。５４。７３。５４１。４８０１。０７－０。０１１。９３－０。０１２。１９０．２１．１５．４６．５５．３８Ａ８．０１３８．０１３０００１６８ｃ０－４．４２－３．５８－８－８－８ｚ"></path>
     </svg>
   </a>
 </header>
@@ -73,10 +73,10 @@
       <div class="audit-content">
         <h3>Audit Log & Partita Doppia</h3>
         <p>Ogni "click" nella simulazione genera una scrittura contabile precisa. Il sistema non si limita a spostare numeri, ma registra il flusso di cassa (Cash Flow) e la variazione di stock (Balance Sheet) in un registro consultabile, garantendo che la somma dei bilanci sia sempre zero.</p>
-        <div class="mini-log-preview">
-          <code>[T+12] STATO -> FAMIGLIA: Bonus Erogato (+500€)</code><br/>
-          <code>[T+12] BANCA -> STATO: Incremento Debito Pubblico (+500€)</code>
-        </div>
+            <div class="mini-log-preview">
+              <code>[T+1] MUTUO: +12000€ (Asset: Crediti | Liability: Depositi)</code><br/>
+              <code>[T+1] REPAYMENT: -100€ (Capital Destruction) | +25€ (Bank Equity/Interest)</code>
+            </div>
       </div>
     </div>
   </div>
@@ -121,7 +121,9 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>Aliquota Fiscale</td><td>20%</td><td>Drenaggio di liquidità e riduzione debito.</td></tr>
+            <tr><td>Aliquota Fiscale</td><td>20%</td><td>Regola il drenaggio di liquidità dal settore privato allo Stato.</td></tr>
+            <tr><td>Cash-to-Deposit Ratio</td><td>20% / 80%</td><td>Allocazione della liquidità tra contante circolante e depositi bancari.</td></tr>
+            <tr><td>Solvibilità Bancaria</td><td>Equity-based</td><td>Il capitale si evolve in base al margine di interesse netto (NIM).</td></tr>
             <tr><td>Coefficiente Riserva</td><td>2.0%</td><td>Soglia minima prima del crash sistemico.</td></tr>
             <tr><td>Target Inflattivo</td><td>Dinamico</td><td>Erosione automatica del potere d'acquisto.</td></tr>
             <tr><td>Creazione Moneta</td><td>Endogena</td><td>Espansione bilancio post-erogazione mutuo.</td></tr>
@@ -155,7 +157,7 @@
       <div class="macro-card">
         <div class="card-icon">⚖️</div>
         <h4>Tax Drain</h4>
-        <p>Le tasse non finanziano solo lo Stato, ma agiscono come strumento restrittivo per "spegnere" l'eccesso di moneta nel sistema.</p>
+        <p>Le tasse sono personalizzabili e non finanziano solo lo Stato, ma agiscono come strumento restrittivo per "spegnere" l'eccesso di moneta nel sistema.</p>
       </div>
     </div>
 
