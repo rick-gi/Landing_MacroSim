@@ -120,6 +120,35 @@
   background-color: #f8fafc;
 }
 
+
+
+
+/* Sezione Funzioni Tecniche */
+@media (max-width: 768px) {
+  .tech-stack-grid { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .macro-dynamics-grid { 
+    grid-template-columns: 1fr; 
+  }
+
+  .data-grid {
+    grid-template-columns: 1fr; /* Il grafico e i parametri uno sotto l'altro */
+    padding: 40px 0;
+  }
+
+  .stability-box {
+    flex-direction: column; /* Il box rosso: testo e barra uno sotto l'altro */
+    text-align: center;
+    gap: 20px;
+  }
+}
+
+
+
+
+
 /* Griglia Funzioni (2 colonne) */
 .tech-stack-grid {
   display: grid;
@@ -228,7 +257,21 @@
 
 
 .entities-overview { padding: 80px 24px; background: #fff; }
-.entities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+
+
+.entities-grid { 
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 20px; 
+  margin-top: 40px; 
+}
+
+/* Aggiungi questa per il Desktop */
+@media (min-width: 768px) {
+  .entities-grid { 
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 .entity-box {
   border: 1px solid #e5e7eb;
